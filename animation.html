@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>particles.js</title>
+  <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
+  <meta name="author" content="Vincent Garreau" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" media="screen" href="demo/css/style.css">
+  <link rel="stylesheet" type="text/css" href="demo/style.css"> 
+  <script defer src="demo/anime.js"></script>
+</head>
+<body>
+    <main id="main">
+        <div>
+            <button id="xmac" data-button="xmac">Xmac</button>
+            <button id="normal" data-button="normal">Normal</button>
+            <button id ="stop" class="stop" data-button="stop">Play / Stop </button> 
+        </div>
+        <div class="points">
+            <p>Points</p>
+            <span id="points">0</span>
+        </div>
+        <div id="gameover" class="game-over" hidden>
+            <h1>Gamae Over</h1>
+        </div>
+        <div>
+            <div id="othercar" class="othercar"></div>
+        <div class="car" id="mycar">
+        </div>
+
+    </main>
+
+<!-- count particles -->
+<div class="count-particles">
+  <span class="js-count-particles">--</span> particles
+</div>
+
+<!-- particles.js container -->
+<div id="particles-js"></div>
+
+<!-- scripts -->
+<script src="demo/../particles.js"></script>
+<script src="demo/js/app.js"></script>
+
+<!-- stats.js -->
+<script src="demo/js/lib/stats.js"></script>
+<script>
+  var count_particles, stats, update;
+  stats = new Stats;
+  stats.setMode(0);
+  stats.domElement.style.position = 'absolute';
+  stats.domElement.style.left = '0px';
+  stats.domElement.style.top = '0px';
+  document.body.appendChild(stats.domElement);
+  count_particles = document.querySelector('.js-count-particles');
+  update = function() {
+    stats.begin();
+    stats.end();
+    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+      count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+    }
+    requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

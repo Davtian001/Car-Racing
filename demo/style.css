@@ -1,0 +1,64 @@
+body {
+    background: rgb(78, 74, 74);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+main {  
+    overflow: hidden;
+    position: absolute;
+    width: 560px;
+    height: 700px;
+    background: #3bb9b1;
+    margin: 4% ;
+    background-repeat: no-repeat;
+    background-image: url('img/trassa.png');
+    background-position: center;
+}
+button {  
+    width: 30%;
+    height: 20%;
+    margin: 1% 2% 0px 11% ;
+    font-size: 110%;
+    font-style: italic;
+    background-color: #53308b;
+    color: aliceblue;
+}
+button.stop{
+    width: 200px;
+    height: 30px;
+    margin: 10px 0px 0px 170px;
+}
+div.car {
+    position: absolute;
+    width: 105px;
+    height: 220px;
+    background-repeat: no-repeat;
+    background-size: 117px;
+    background-image: url('img/car1.png');
+}
+div.othercar {
+    position: absolute;
+    width: 130px;
+    height: 230px;
+    background-repeat: no-repeat;
+}
+.game-over {
+    width: 40%;
+    height: 20%;
+    text-align: center;
+    padding: 8px;
+    margin: 0% 30% 30%;
+    border: 5px dotted red;
+    color: rgb(255, 0, 0);
+    font: italic bold 150% verdana;
+}
+.points {
+    text-align: center;
+    width: 90px;  
+    height: 106px;
+    margin: 0px 0px 0px 30px;
+    font: italic bold 150% verdana;
+    color: rgb(39, 22, 31)
+}
