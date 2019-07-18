@@ -79,7 +79,7 @@ docum.addEventListener("DOMContentLoaded", () => {
 
     function normal() {
         if (count < main.offsetHeight) {
-            othercar.style.backgroundImage = `url('demo/img/car${img}.png')`;
+            othercar.style.backgroundImage = `url('img/car${img}.png')`;
             othercar.hidden = false;
            // gameOver(othercar.getBoundingClientRect().left, othercar.getBoundingClientRect().top)
             bgSize += 0.5

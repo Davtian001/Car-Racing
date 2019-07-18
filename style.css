@@ -5,7 +5,8 @@ body {
     overflow: hidden;
 }
 
-main {  
+main { 
+    border-radius: 33px; 
     overflow: hidden;
     position: absolute;
     width: 560px;
